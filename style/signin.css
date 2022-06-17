@@ -1,0 +1,259 @@
+#main{
+    width: 50%;
+   
+    margin: auto;
+   
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+}
+#main>h2{
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#submain{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    
+}
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+label{
+    font-size: 12px;
+}
+#submail{
+
+width: 45%;
+
+}
+#info{
+
+
+
+width: 45%;
+}
+#forget{
+    color: #2E2C38;
+}
+#forget:hover{
+    color: #19a6d9;
+}
+#learn{
+    color: #2E2C38;
+}
+#learn:hover{
+    color: #19a6d9;
+}
+#btn{
+    border-radius: 50px;
+
+}
+#btn:hover{
+    background-color: #202340;
+    color: #FFF;
+    /* border-radius: 50px; */
+
+}
+.mail{
+display: grid;
+
+}
+.pass{
+display: grid;
+
+}
+#info>p{
+font-size: 12px;
+
+}
+#info>h2{
+font-size: 16px;
+font-weight: normal;
+
+}
+#submit{
+width: 100%;
+border-radius: 50px;
+background-color: #2b2f59;
+color: white;
+font-weight: bold;
+}
+#bttn{
+    border-radius: 50px;
+    
+}
+button{
+  
+    padding: 10px;
+    font-weight: bold;
+}
+@media all and (min-width:451px) and (max-width:750px) {
+
+  #submain{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 50px;
+  }
+ 
+
+}
+#doller{
+    height: 18px;
+    /* width: 20px; */
+ }
+  @media all and (min-width:50px) and (max-width:450px) {
+
+#submain{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 50px;
+}
+
+}
+
+
+.css-tooltip{
+  position: relative;
+  
+}
+.css-tooltip:hover:after{
+  content:attr(data-tooltip);
+  background:rgb(234, 234, 234);
+  padding:5px;
+  border-radius:3px; 
+  display: inline-block;
+  position: absolute;
+  transform: translate(-50%,-100%); 
+  margin:0 auto;
+  color:#FFF;
+  min-width:100px;
+  min-width:150px;
+  top:-5px;
+  left: 50%;
+  text-align:center;
+}
+.css-tooltip:hover:before {
+  top:-5px;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(110, 51, 51, 0);
+  border-top-color: rgb(0, 0, 0);
+  border-width: 5px;
+  margin-left: -5px;
+       transform: translate(0,0px); 
+}
+
+
+/*  footer Page of CSS will be start from HERE */
+
+#footer_body{
+    margin-top: 60px;
+    background-color: #f0f1f7;
+}
+.email_subscriber_andlink, .services_and_social_media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #545871;
+    color: #fff;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #939394;
+}
+.email_subscriber_andlink>div{
+    margin: 10px 15px 10px 15px;
+    font-size: 13px;
+}
+.mypage_link{
+    color: #fff;
+}
+
+.email_subscriber_andlink>div>input{
+    margin-left: 15px;
+    border-radius: 2px;
+    border: none;
+    font-size: 12px;
+    width: 40ex;
+    margin-top: 0;
+    height: 25px;
+    background-color: #fff;
+    color: #202340;
+}
+.email_subscriber_andlink>div>button{
+    margin-left: -10px;
+    border-radius: 0 2px 2px 0;
+    height: 25px;
+    min-height: 0;
+    border: none;
+    background-color: #f0f1f7;
+    color: #2e2c38;
+    cursor: pointer;
+    margin-bottom: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.email_subscriber_andlink>div>button:hover{
+   
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+}
+.services_and_social_media{
+    margin-bottom: 10px;
+}
+.services_and_social_media>div{
+    margin: 10px 15px 5px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.services_and_social_media>div>div{
+    border-right: 1px solid #6C6D70;
+    padding: 0px 5px 0px 5px;
+    font-size: .75rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.services_and_social_media>div>img{
+    width: 25px;
+    margin: 5px;
+}
+.policy{
+    margin-left: 10px;
+    border-bottom: 2px solid #f0f1f7;
+    border-bottom: 2px solid #d6d6d8;
+}
+.policy>a{
+    color: #2E2C38;
+    font-size: .75rem;
+}
+.policy>p{
+    font-size: .6875rem;
+    line-height: 10px;
+    line-height: 20px;
+}
+.footer_awards{
+    width: 55%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer_awards>img{
+    width: 75px;
+    height: 70px;
+    margin: 20px 5px;
+}
+.footer_awards>img:nth-child(7),.footer_awards>img:nth-child(8),.footer_awards>img:nth-child(9){
+    width: 100px;
+}

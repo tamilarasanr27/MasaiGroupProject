@@ -1,0 +1,146 @@
+#sezzle{
+    margin-top: 0px;
+    height: 30px;
+    background-color:#202340 ;
+    color: white;
+    text-align: center;
+    
+}
+
+#sezzle a{
+color: white;
+}
+#a{
+    margin-top: 0px;
+    height: 150px;
+    width:100%;
+    /* border: 1px solid; */
+    display: grid;
+    background-color: #f0f1f7;
+}
+
+
+
+#a img{
+    height: 44px;
+    width: 200px;
+}
+#a .b{
+   margin-right: 100px;
+   display: flex;
+}
+#b{
+    justify-content: space-between;
+   align-items: center;
+   display: flex;
+}
+#b #option{
+    height: 40px;
+width: 170px;
+border-radius:20px;;
+}
+#b #option img{
+    height: 20px;
+    width: 20px;
+}
+#b #search{
+    height: 40px;
+    width: 550px;
+    border-radius: 20px;
+}
+#b #forapi{
+    height: 40px;
+    width: 80px;
+border-radius: 20px;
+background-color: #202340;
+color: white;
+}
+#b>.c{
+    width: 300px;
+}
+#c{
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(1,1fr);
+   gap: 30px;
+}
+
+#c>.d{
+    width: 230px;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+}
+#c>.e{
+    width: 780px;
+  margin-left: 20px;
+}
+#c>.e{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#c>.e a{
+    text-decoration: none;
+    color:#2a2d49;
+    cursor: pointer;
+}
+#c>.e a:hover{
+    color: rgb(171, 123, 68);
+
+}
+#c>.f{
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 5px;
+}
+#c>.f>div{
+    /* border: 1px solid; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#c>.f img{
+    height: 50px;
+    width: 30px;
+}
+#c>.f a{
+    text-decoration: none;
+}
+#c>.f a:hover{
+    color: rgb(171, 123, 68);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+#container>div{
+    margin-left: 250px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#container img{
+    height: 300px;
+    width: 300px;
+}
+
+#zz{
+    margin-top: 3px;
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f1f7;
+}
+#zz>div{
+    margin-left: 10px;
+    color: 
+    #2a2d49;
+    /* border: 1px solid; */
+    text-align: center;
+}

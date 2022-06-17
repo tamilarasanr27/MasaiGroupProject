@@ -1,0 +1,470 @@
+#submain>h1 {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+#submain {
+    width: 55%;
+    height: auto;
+
+    margin: auto;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+
+}
+
+.name {
+    display: grid;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+.lastname {
+    display: grid;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+#frstform {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.mail {
+    display: grid;
+    width: 45%;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+.pass {
+    display: grid;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+.conpass {
+    display: grid;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+
+}
+
+#lastform {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#secondsubmain {
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+.al {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#thirdsubmain {
+    margin-bottom: 35px;
+}
+
+#fourthsubmain {
+    border: 1px solid rgb(218, 211, 211);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 95%;
+}
+
+#Reffer {
+    display: block;
+    width: 200%;
+    margin-top: 5px;
+}
+
+#head {
+    margin-top: 40px;
+    font-size: 20px;
+
+}
+
+#head>h2 {
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#pvcplc{
+color:#2E2C38
+}
+#pvcplc:hover{
+    color:#19a6d9;
+}
+#tos{
+    color: #2E2C38;
+}
+#tos:hover{
+    color:#19a6d9;
+}
+.robort {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+#capcha {
+    width: 25%;
+    height: auto;
+    display: flex;
+    border: 1px solid rgb(184, 183, 183);
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+
+}
+
+#capcha>#cap {
+    width: 38px;
+    height: 38px;
+    margin: auto;
+}
+
+#capcha>#robocheck {
+    margin: auto;
+}
+
+#capcha>p {
+    font-size: 15px;
+    margin: auto;
+}
+#submit:hover{
+  
+    background-color: #2b2f59;
+}
+#submit {
+    width: 70%;
+    border-radius: 50px;
+    background-color: #373b6b;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+.consultant {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.tok>.SweetAlt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.tek>.Sweet {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+
+
+#submain {
+    top: 30%;
+    left: 22%;
+
+}
+
+@media all and (min-width:451px) and (max-width:750px) {
+
+    #frstform {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    #lastform {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .optinal>span {
+        font-size: 12px;
+
+    }
+
+    #fourthsubmain>#Reffer {
+        width: 50%;
+    }
+
+    #capcha {
+        width: 40%;
+    }
+
+    #capcha>p {
+        font-size: 10px;
+
+    }
+
+    #capcha>#cap {
+        width: 20px;
+
+    }
+
+    #Reffer {
+        width: 45%;
+    }
+
+    #submit {
+        width: 70%;
+        font-size: 12px;
+
+    }
+
+
+
+
+}
+
+@media all and (min-width:50px) and (max-width:450px) {
+
+
+    #frstform {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    #lastform {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .optinal>span {
+        font-size: 10px;
+
+    }
+
+    #capcha {
+        width: 40%;
+    }
+
+    #capcha>p {
+        font-size: 8px;
+
+    }
+
+    #capcha>#cap {
+        width: 10px;
+
+    }
+
+    #Reffer {
+        width: 45%;
+    }
+
+    #submit {
+        width: 80%;
+        font-size: 8px;
+        margin-bottom: 60%;
+
+    }
+
+
+}
+
+
+
+.css-tooltip {
+    position: relative;
+
+}
+
+.css-tooltip:hover:after {
+    content: attr(data-tooltip);
+    background: rgb(25, 23, 23);
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    margin: 0 auto;
+    color: #FFF;
+    min-width: 100px;
+    min-width: 150px;
+    top: -5px;
+    left: 50%;
+    text-align: center;
+}
+
+.css-tooltip:hover:before {
+    top: -5px;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000;
+    border-width: 5px;
+    margin-left: -5px;
+    transform: translate(0, 0px);
+}
+
+
+/*  footer Page of CSS will be start from HERE */
+
+#footer_body {
+    margin-top: 40px;
+    background-color: #f0f1f7;
+}
+
+.email_subscriber_andlink,
+.services_and_social_media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #545871;
+    color: #fff;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #939394;
+}
+
+.email_subscriber_andlink>div {
+    margin: 10px 15px 10px 15px;
+    font-size: 13px;
+}
+
+.mypage_link {
+    color: #fff;
+}
+
+.email_subscriber_andlink>div>input {
+    margin-left: 15px;
+    border-radius: 2px;
+    border: none;
+    font-size: 12px;
+    width: 40ex;
+    margin-top: 0;
+    height: 25px;
+    background-color: #fff;
+    color: #202340;
+}
+
+.email_subscriber_andlink>div>button {
+    margin-left: -10px;
+    border-radius: 0 2px 2px 0;
+    height: 25px;
+    min-height: 0;
+    border: none;
+    background-color: #f0f1f7;
+    color: #2e2c38;
+    cursor: pointer;
+    margin-bottom: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.email_subscriber_andlink>div>button:hover {
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+}
+
+.services_and_social_media {
+    margin-bottom: 10px;
+}
+
+.services_and_social_media>div {
+    margin: 10px 15px 5px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services_and_social_media>div>div {
+    border-right: 1px solid #6C6D70;
+    padding: 0px 5px 0px 5px;
+    font-size: .75rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.services_and_social_media>div>img {
+    width: 25px;
+    margin: 5px;
+}
+
+.policy {
+    margin-left: 10px;
+    border-bottom: 2px solid #f0f1f7;
+    border-bottom: 2px solid #d6d6d8;
+}
+
+.policy>a {
+    color: #2E2C38;
+    font-size: .75rem;
+}
+
+.policy>p {
+   
+    font-size: .6875rem;
+    line-height: 10px;
+    line-height: 20px;
+}
+
+.footer_awards {
+    width: 55%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer_awards>img {
+    width: 75px;
+    height: 70px;
+    margin: 20px 5px;
+}
+
+.footer_awards>img:nth-child(7),
+.footer_awards>img:nth-child(8),
+.footer_awards>img:nth-child(9) {
+    width: 100px;
+}
