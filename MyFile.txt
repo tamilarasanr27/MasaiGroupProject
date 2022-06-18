@@ -1,1 +1,9 @@
 This is just a test
+
+// To create a new Branch ---> git checkout -b <name of the branch>
+
+example :- git checkout - b Niraj
+
+// To change the Branch ---> git checkout  <name of the branch>
+
+example :- git checkout main
