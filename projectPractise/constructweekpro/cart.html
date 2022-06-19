@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <h1>Your Cart</h1>
+
+    <div id="bag">
+      <div>
+        <h2>Shipment from COSTWAY</h2>
+        <div id="done">
+          <p>
+            🚚Congratulations! Your order qualifies for free shipping from
+            COSTWAY. <b>Learn More or Go to this storefront</b>
+          </p>
+        </div>
+        <div id="allData"></div>
+        <div class="sum"></div>
+
+        <div id="saveData"></div>
+      </div>
+      <div id="box">
+        <h2>Order Total</h2>
+        <div class="sum"></div>
+        <p><a id="shop" href="dummy.html">Continue Shopping</a></p>
+        <div id="zipbtn">
+          <input type="text" id="continue" placeholder="Zip code" />
+          <button id="bttn">Estimate Shipping</button>
+        </div>
+        <button id="bttn2">Proceed to Checkout</button>
+        <div id="paymentbtn">
+          <button id="logo1">
+            <img
+              src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/ppcredit_MD_BNPOT_1x.png"
+              alt=""
+            />
+          </button>
+          <button id="logo2">
+            <img
+              src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png"
+              alt=""
+            />
+          </button>
+          <button id="logo">
+            <img
+              src="https://src.mastercard.com/assets/img/btn/src_chk_btn_147x034px.svg?locale=en_us&paymentmethod=master,visa,discover,amex&checkoutid=a4a6w4v6h7cg0iaijxn0j1iaoelnus5936"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script type="module">
+  import nav from "./navImport.js";
+
+  import { Footer } from "./footerImport.js";
+
+  let foot = new Footer();
+  document.getElementById("footer").innerHTML = foot.data;
+
+  document.getElementById("navbar").innerHTML = nav();
+  var cartData = JSON.parse(localStorage.getItem("masai-cart")) || [];
+
+  function display(data) {
+    allData.innerHTML = null;
+    var sum = 0;
+    data.forEach(function (elem) {
+      var card = document.createElement("div");
+      var card1 = document.createElement("div");
+      var card2 = document.createElement("div");
+      var bigcard = document.createElement("div");
+
+      var img = document.createElement("img");
+      img.src = elem.imageurl;
+
+      var name = document.createElement("h3");
+      name.textContent = elem.name;
+
+      var quantity = document.createElement("input");
+      // quantity.setAttribute("id", "qtyinput")
+      quantity.placeholder = "Qty";
+      quantity.text = "number";
+      quantity.style.width = "30px";
+      quantity.style.height = "25px";
+      // quantity.style.borderRadius="5px"
+
+      // var num= document.querySelector("#qtyinput").value;
+      var price = document.createElement("p");
+      price.textContent = "$" + elem.price;
+
+      sum = sum + Number(elem.price);
+      document.querySelector(".sum").innerHTML = "Store total: " + sum;
+
+      var button = document.createElement("button");
+      button.innerText = "Remove";
+      var button1 = document.createElement("button");
+      button1.innerText = "Save for Later";
+
+      button.addEventListener("click", function () {
+        Delete(elem.price);
+      });
+      button1.addEventListener("click", function () {
+        Save(elem);
+      });
+
+      card.append(img);
+      card1.append(name, price, quantity);
+      card2.append(button1, button);
+
+      bigcard.append(card, card1, card2);
+      allData.append(bigcard);
+    });
+  }
+  display(cartData);
+
+  function Delete(id) {
+    cartData = cartData.filter(function (elem) {
+      return elem.price != id;
+    });
+    display(cartData);
+    localStorage.setItem("masai-cart", JSON.stringify(cartData));
+  }
+
+  //---------------------------------------------------------------------------------------------------
+  //save for later
+
+  function Save({ image_url, name, price }) {
+    let allData = document.querySelector("#saveData");
+
+    var card = document.createElement("div");
+    var card1 = document.createElement("div");
+    var card2 = document.createElement("div");
+    var bigcard = document.createElement("div");
+
+    var img = document.createElement("img");
+    img.src = imageurl;
+
+    var name = document.createElement("h3");
+    name.innerHTML = name;
+
+    var price = document.createElement("p");
+    price.innerHTML = price;
+
+    var button = document.createElement("button");
+    button.innerText = "Remove";
+    var button1 = document.createElement("button");
+    button1.innerText = "Add to cart";
+
+    card.append(img);
+    card1.append(name, price);
+    card2.append(button1, button);
+
+    bigcard.append(card, card1, card2);
+    allData.append(bigcard);
+  }
+  Save();
+</script>
+<script src="cart.js"></script>
