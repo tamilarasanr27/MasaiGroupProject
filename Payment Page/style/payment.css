@@ -1,0 +1,517 @@
+body {
+    scroll-behavior: smooth;
+    position: relative;
+    /* background-color: #beb5f0; */
+}
+
+p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    /* font-weight: 300; */
+    /* font-family: 'Gothic A1', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto Mono', monospace; */
+}
+
+/* complet page */
+#mainpage {
+    background-color: #ffffff;
+    width: 65%;
+    height: auto;
+    border: 1px solid #000000;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+#ordersum {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #008000;
+}
+
+#paymentpage {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    width: 98%;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+
+    box-shadow: #00000029 0px 3px 6px, #0000003b 0px 3px 6px;
+}
+
+#paymentpage>p {
+    background-color: #2e314f;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+    height: auto;
+}
+
+/* name boxes */
+#name {
+    display: flex;
+    color: #202340;
+}
+
+#email {
+    color: #202340;
+}
+
+#cardnum {
+    color: #202340;
+}
+
+#expirydetails {
+    color: #202340;
+}
+
+#contry {
+    color: #202340;
+}
+
+#total {
+    color: #202340;
+}
+
+#name>div>input {
+    width: 120%;
+    font-size: 16px;
+    padding: 10px;
+    /* padding-left: 60px; */
+    text-align: center;
+    border-radius: 5px;
+}
+
+#name>div:nth-child(2) {
+    margin-left: 20%;
+}
+
+/* email box */
+#email {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#email>input {
+    padding: 10px;
+    font-size: 16px;
+    /* padding-left: 17%; */
+    width: 40%;
+    border-radius: 5px;
+
+}
+
+#email>input>placeholder {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 5px;
+}
+
+/* card information */
+#cardvalue {
+    display: flex;
+}
+
+#cardvalue>div {
+    /* border: 1px solid black; */
+    margin-left: 30px;
+    width: 40%;
+}
+
+#cardvalue>input {
+    padding: 1px;
+    /* padding-left: 60px; */
+    width: 40%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* card logos */
+#cardvalue>div>img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 10px;
+    box-shadow: #0000003d 0px 3px 8px;
+}
+
+#cardvalue>div {
+    width: 200px;
+}
+
+/* expiry Details */
+#expirydetails {
+    display: flex;
+
+}
+
+#expirydetails>div {
+    margin-right: 80px;
+}
+
+#expirydetails>div:nth-child(1)>input {
+    padding: 5px;
+    width: 120%;
+    font-size: 16px;
+}
+
+/* cvv */
+
+#expirydetails>div:nth-child(2)>input {
+    padding: 5px;
+    width: 40%;
+    font-size: 16px;
+}
+
+/* contry Selector */
+#contry>Select {
+    width: 75%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#combine {
+    display: flex;
+}
+
+#total {
+    display: flex;
+    /* width: 40%; */
+    margin-top: 50px;
+
+}
+
+#total>input {
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total>p {
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+/* checkbox will be start from here */
+#checkbox {
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: -40px;
+    font-size: 16px;
+    display: inline;
+    color: #414467;
+}
+
+#checkbox>input {
+    width: 40px;
+    height: 18px;
+
+   
+}
+
+
+#checkbox:hover {
+    color: rgb(32, 174, 206);
+    font-weight: 700;
+}
+
+/* payment Button is here */
+#paymentbtn {
+    width: 70%;
+    margin: auto;
+}
+
+#paymentbtn>input {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+    border-radius: 10px;
+    background-color: rgb(15, 177, 15);
+    background-color: rgb(180, 195, 240);
+    color: white;
+    font-size: 15px;
+    color: black;
+}
+
+#paymentbtn>input:hover {
+
+    font-size: 16px;
+    background-color: rgb(5, 13, 44);
+    color: white;
+    font-weight: bold;
+
+}
+
+#total>input {
+    font-size: 25px;
+}
+
+
+@media all and (min-width:500px) and (max-width:850px) {
+
+    #name {
+        display: block;
+        flex-wrap: wrap;
+    }
+
+    #name>div:nth-child(2) {
+        margin-left: 0px;
+    }
+
+    #name>div>input {
+        width: 50%;
+        font-size: 16px;
+        padding: 8px;
+      
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #cardvalue {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #cardvalue>div {
+        width: 40%;
+    }
+
+    #cardvalue>input {
+        padding: 5px;
+        width: 50%;
+        font-size: 16px;
+    }
+
+    /* CSS of card logos will be start from here */
+    #cardvalue>div>img {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    #cardvalue>div {
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    #total>input {
+        width: 20%;
+        height: 20px;
+        border-radius: 5px;
+        
+        font-size: 26px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #total>p {
+        font-size: 20px;
+        margin-top: 22px;
+    }
+
+    #total {
+        display: flex;
+      
+        margin-top: 2px;
+
+    }
+
+    #contry>select {
+        width: 65%;
+        padding: 5px;
+        font-size: 16px;
+
+    }
+
+    #combine {
+        display: block;
+      
+    }
+
+}
+
+
+
+@media all and (min-width:300px) and (max-width:500px) {
+    #paymentpage>p {
+        background-color: #2f364c;
+        font-size: 40px;
+        text-align: center;
+        border-radius: 5px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5px;
+        font-size: 15px;
+        height: auto;
+    }
+
+    #name {
+        display: flex;
+     
+    }
+
+    #name>div:nth-child(2) {
+        margin-left: 0px;
+    }
+
+    #cardvalue {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #cardvalue>div {
+        width: 40%;
+    }
+
+    #cardvalue>input {
+        padding: 5px;
+        width: 50%;
+        font-size: 12px;
+    }
+
+   /* CSS of card logos here */
+    #cardvalue>div>img {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    #cardvalue>div {
+        width: 200px;
+        margin-top: 10px;
+    }
+
+
+    #name>div>input {
+        width: 80%;
+        font-size: 12px;
+        padding: 5px;
+
+    }
+
+    p {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+    }
+
+    #email>input {
+        padding: 5px;
+        font-size: 11px;
+     
+        width: 50%;
+        border-radius: 5px;
+
+    }
+
+    #email>input>placeholder {
+        font-size: 2px;
+    }
+
+    #expirydetails {
+        display: flex;
+
+    }
+
+    #expirydetails>div {
+        margin-right: 10px;
+    }
+
+    #expirydetails>div:nth-child(1)>input {
+        padding: 5px;
+        width: 80%;
+        font-size: 10px;
+    }
+
+    /*CSS of cvv is start from here */
+
+    #expirydetails>div:nth-child(2)>input {
+        padding: 1px;
+        width: 40%;
+        font-size: 12px;
+    }
+
+    #contry>select {
+        width: 65%;
+        padding: 5px;
+        font-size: 10px;
+
+    }
+
+    #combine {
+        display: block;
+      
+    }
+
+    #total {
+        display: flex;
+       
+        margin-top: 5px;
+
+
+    }
+
+    #total>input {
+        width: 20%;
+        height: 20px;
+
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #total>p {
+        font-size: 16px;
+        margin-top: 22px;
+    }
+
+    #checkbox {
+        width: 100%;
+     
+        margin-top: 10px;
+        margin-bottom: -40px;
+        font-size: 12px;
+        display: inline;
+    }
+
+    #checkbox>input {
+        width: 20px;
+        height: 12px;
+        margin-top: 15px;
+    }
+
+    #paymentbtn {
+        width: 50%;
+        margin: auto;
+    }
+
+    #paymentbtn>input {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #paymentbtn>input:hover {
+
+        font-size: 12px;
+        background-color: #05091d;
+        color: white;
+
+    }
+}
