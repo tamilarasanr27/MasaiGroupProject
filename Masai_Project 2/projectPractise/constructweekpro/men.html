@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="men.css" />
+  </head>
+  <body>
+  <script type="module">
+    import nav from "../navbar/script/navImport.js";
+  document.getElementById('navbar').innerHTML = nav();
+  </script>
+    <div id="navbar">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <div id="shoppingcart">
+            Shopping Cart
+            <button id="close">X</button>
+          </div>
+          <div id="pro"></div>
+          <div id="sum"></div>
+          <div id="pro2">
+            <button id="btn">View cart/Checkout</button>
+            <br/>
+            <button id="btn2">Continue Shopping</button>
+          </div>
+        </div>
+      </div>
+      <!-- <h3>Reebok</h3> -->
+
+      <div id="header">
+        <h3><a href="cart.html">Cart</a></h3>
+        <!-- <h3><a href="men.html">Mens</a></h3>
+        <h3><a href="women.html">Womens</a></h3>
+        <h3>User Profile</h3> -->
+      </div>
+    </div>
+    <!-- <h1>Mens Products</h1>
+    <select id="priceChange" onchange="handlePrice()">
+      <option value="none">Price category</option>
+      <option value="LTH">Price-low to high</option>
+      <option value="HTL">Price-high to low</option>
+    </select>
+    <select id="nameChange" onchange="handleName()">
+      <option value="none">Name category</option>
+      <option value="ASC">Name-Ascending order</option>
+      <option value="DES">Name-Descending order</option>
+    </select>
+    <select id="filterBrand" onchange="handleFilter()">
+      <option value="none">Brand category</option>
+      <option value="Lee">Lee</option>
+      <option value="Adidas">Adidas</option>
+      <option value="Puma">Puma</option>
+    </select> -->
+
+    <div id="products"></div>
+  </body>
+</html>
+
+<script>
+  var mensData = [
+    
+    {
+      name: "Scully Western Dress Womens Full Length Lace Up Sleeveless F0_HC118",
+      image_url:
+        "https://img.shop.com/Image/290000/292000/292019/products/1932799920.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/290000/292000/292019/products/1932799920__800x800__.jpg",
+      img2: "https://img.shop.com/Image/290000/292000/292019/products/alt_838105307.jpg?plain&size=1024x1024",
+      img3: "https://img.shop.com/Image/290000/292000/292019/products/alt_838105307.jpg?plain&size=1024x1024",
+    },
+
+    {
+      name: "CONNECTED APPAREL Womens Burgundy Short Sleeve V Neck Above The Knee Party Sheath Dress Petites 12P",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1920488545.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "30.00",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1920488545__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_828411405.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_828411406.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "R&M RICHARDS Womens Burgundy Embellished Velvet Off Shoulder Maxi Formal Dress 8",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1919879594.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "32.00",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1919879594__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+    },
+
+    {
+      name: "R&M RICHARDS Womens Burgundy Embellished Velvet Off Shoulder Maxi Formal Dress 8",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1919879594.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1919879594__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "CITY STUDIO Womens Black Sleeveless Maxi Sheath Evening Dress Juniors Size: 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1932450912.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1932450912__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766811.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766812.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "MORGAN & CO Womens Pink Spaghetti Strap Maxi Sheath Evening Dress Juniors 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1917714885.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1917714885__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_825523337.jpg?plain&size=400x400",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_825523339.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "Scully Western Dress Womens Full Length Lace Up Sleeveless F0_HC118",
+      image_url:
+        "https://img.shop.com/Image/290000/292000/292019/products/1932799920.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/290000/292000/292019/products/1932799920__800x800__.jpg",
+      img2: "https://img.shop.com/Image/290000/292000/292019/products/alt_838105307.jpg?plain&size=1024x1024",
+      img3: "https://img.shop.com/Image/290000/292000/292019/products/alt_838105307.jpg?plain&size=1024x1024",
+    },
+    {
+      name: "CONNECTED APPAREL Womens Burgundy Short Sleeve V Neck Above The Knee Party Sheath Dress Petites 12P",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1920488545.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1920488545__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_828411405.jpg?plain&size=400x400",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_828411406.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "BETSY & ADAM Womens Purple Cape-sleeve 3/4 Sleeve Asymmetrical Neckline Maxi Formal Dress 4",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1920882876.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1920882876__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_828711230.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_828711231.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "R&M RICHARDS Womens Burgundy Embellished Velvet Off Shoulder Maxi Formal Dress 8",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1919879594.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1919879594__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "CITY STUDIO Womens Black Sleeveless Maxi Sheath Evening Dress Juniors Size: 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1932450912.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1932450912__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766811.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766812.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "MORGAN & CO Womens Pink Spaghetti Strap Maxi Sheath Evening Dress Juniors 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1917714885.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1917714885__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_825523337.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_825523339.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "Scully Western Dress Womens Full Length Lace Up Sleeveless F0_HC118",
+      image_url:
+        "https://img.shop.com/Image/290000/292000/292019/products/1932799920.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/290000/292000/292019/products/1932799920__800x800__.jpg",
+      img2: "https://img.shop.com/Image/290000/292000/292019/products/alt_838105307.jpg?plain&size=1024x1024",
+      img3: "https://img.shop.com/Image/290000/292000/292019/products/alt_838105307.jpg?plain&size=1024x1024",
+    },
+    {
+      name: "CONNECTED APPAREL Womens Burgundy Short Sleeve V Neck Above The Knee Party Sheath Dress Petites 12P",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1920488545.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1920488545__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_828411405.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_828411406.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "BETSY & ADAM Womens Purple Cape-sleeve 3/4 Sleeve Asymmetrical Neckline Maxi Formal Dress 4",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1920882876.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1920882876__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_828711230.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_828711231.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "R&M RICHARDS Womens Burgundy Embellished Velvet Off Shoulder Maxi Formal Dress 8",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1919879594.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.00",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1919879594__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_827870953.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "CITY STUDIO Womens Black Sleeveless Maxi Sheath Evening Dress Juniors Size: 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1932450912.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "45",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1932450912__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766811.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766812.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "MORGAN & CO Womens Pink Spaghetti Strap Maxi Sheath Evening Dress Juniors 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1917714885.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "17.98",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1917714885__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_825523337.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_825523339.jpg?plain&size=2000x2000",
+    },
+    {
+      name: "CITY STUDIO Womens Black Sleeveless Maxi Sheath Evening Dress Juniors Size: 1",
+      image_url:
+        "https://img.shop.com/Image/270000/278100/278132/products/1932450912.jpg?plain&size=400x400",
+      seller: "Sold by Fifth Sun",
+      price: "45",
+      offprice: "off :$29.99",
+      cashback: " cashback :+ $1.08 / 6%",
+      type: "tshirt",
+      img1: "https://img.shop.com/Image/270000/278100/278132/products/1932450912__800x800__.jpg",
+      img2: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766811.jpg?plain&size=2000x2000",
+      img3: "https://img.shop.com/Image/270000/278100/278132/products/alt_837766812.jpg?plain&size=2000x2000",
+    },
+  ];
+
+  localStorage.setItem("masai-ecom", JSON.stringify(mensData));
+
+  var cartLsData = JSON.parse(localStorage.getItem("masai-cart")) || [];
+
+  var allData = document.querySelector("#products");
+
+  function display(data) {
+    allData.innerHTML = null;
+
+    data.forEach(function (elem) {
+      var card = document.createElement("div");
+
+      var img = document.createElement("img");
+      img.src = elem.image_url;
+
+      var name = document.createElement("h3");
+      name.textContent = elem.name;
+
+      var price = document.createElement("p");
+      price.textContent = elem.price;
+
+      var offprice = document.createElement("p");
+      offprice.textContent = elem.offprice;
+
+      var cashback = document.createElement("p");
+      cashback.textContent = elem.cashback;
+
+      var div = document.createElement("div");
+      div.setAttribute("id", "btn");
+
+      var button = document.createElement("button");
+      button.innerText = "Add to Cart";
+
+      button.addEventListener("click", function () {
+        AddToCart(elem);
+      });
+
+      let btn1 = document.createElement("button");
+      btn1.setAttribute("id", "btn1");
+      btn1.innerText = "See Details";
+      btn1.style.color = "rgb(134, 134, 134)";
+      btn1.addEventListener("click", function () {
+        detail(el);
+      });
+
+      card.append(img, name, price, offprice, cashback, button, btn1);
+
+      allData.append(card);
+    });
+  }
+  display(mensData);
+
+  // //detail
+  // function detail(el){
+  //   window
+  // }
+
+  function AddToCart(elem) {
+    cartLsData.push(elem);
+    localStorage.setItem("masai-cart", JSON.stringify(cartLsData));
+    alert("Product added successfully");
+  }
+</script>
+<script src="index.js"></script>
+<script>
+  /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
+</script>
+<script src="sidebarcart.js"></script>
